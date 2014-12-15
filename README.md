@@ -18,9 +18,9 @@ Importar la base de datos portal.sql
     psql drupal < portal.sql
 
 
-Configurar el apache
+Configurar el apache   
 
-Auntenticacion del portal 
-        user:admin
-        pass:admin
+Auntenticacion del portal   
+        user:admin  
+        pass:admin  
         
