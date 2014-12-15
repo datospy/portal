@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortlink" href="https://www.drupal.org/node/2194551" />
+<link rel="canonical" href="https://www.drupal.org/node/2194551" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="description" content="This version of ctools is a accumulation of several patches from #2129033: [Meta] CTools 7.x-1.4 release , and includes 2 security updates as well. See SA-CONTRIB-2014-013 Changes since 2013-04-04:" />
+  <title>ctools 7.x-1.4 | Drupal.org</title>
+  <link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_UiwJn6TN5_as4AlP_Ebb5QeVZqhwgwa7wUTiVi6ypFw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_Hj-L7XQcE0qfyJRECGV_H0uiR6AMwoPoTuTUbvzzim0.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_ncUWNwPQz4zrWcunrjo67FeRD35laUaLtnKgGHDKFPU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_4KBmvbad96qqgQavWjlUNyWYdWLb1pKjWaMiirqty6c.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.drupal.org/files/css/css_HnzBNvTfhlMJR4EPuAB8uqWsR1O9Za7ISMJktQ8CSkM.css" media="all" />
+  <script type="text/javascript" src="https://www.drupal.org/files/js/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
+<script type="text/javascript" src="https://www.drupal.org/files/js/js_KCd8rbJYUruV1tRJnh4um34UYvyhlrSVCPR1jNko2h8.js"></script>
+<script type="text/javascript" src="https://www.drupal.org/files/js/js_RQVeNBmto7btahI5lL7w7LAdc-VJm-UhZLsbv1hOfZs.js"></script>
+<script type="text/javascript" src="https://www.drupal.org/files/js/js_rv_BKYv7yieH0IgHddhWHDC-bWGan8yiJbusyOpr0mw.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-2360451-1"]);_gaq.push(['_setCustomVar', 1, "User roles", "anonymous user,Not a spammer", 1]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.drupal.org/files/js/js_a_XWH2S1EQaU85ypMDyQGiUfzPFez1IOZKxHnhGkv3E.js"></script>
+<script type="text/javascript" src="https://www.drupal.org/files/js/js_fZbsGtwY7jnTvjaAvTzUEFJKO-FkHlZC6o1x2O_56wc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"bluecheese","theme_token":"ZdfNPTAIZUnK_2t0_p8gJJqflFSkEI-txKq0831hpG0","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/codefilter\/codefilter.js":1,"sites\/all\/modules\/drupalorg_crosssite\/js\/jquery.timeago.js":1,"sites\/all\/modules\/drupalorg_crosssite\/js\/drupalorg_crosssite.js":1,"sites\/all\/modules\/project_issue\/js\/project-issue.js":1,"sites\/all\/modules\/drupalorg\/drupalorg\/js\/general.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/bluecheese\/js\/bluecheese.js":1,"misc\/form.js":1,"1":1,"misc\/collapse.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/codefilter\/codefilter.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/search\/search.css":1,"sites\/all\/modules\/project_issue\/project_issue.css":1,"sites\/all\/modules\/project\/release\/project_release.css":1,"sites\/all\/modules\/project\/package\/project_package.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/google_admanager\/google_admanager.css":1,"sites\/all\/themes\/bluecheese\/css\/styles.css":1}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-2194551 node-type-project-release drupalorg-site-main" >
+  <div id="skip-link">
+    <a class="element-invisible element-focusable" href="#content">Skip to main content</a>
+    <a class="element-invisible element-focusable" href="#search-block-form">Skip to search</a>
+  </div>
+        <div id="header" class="clearfix">
+    <div id="header-screen" class="clearfix">
+      <div id="header-inner" class="container-12 clearfix">
+        <div id="nav-header" role="navigation">
+            <div class="region region-navigation">
+    <div id="block-system-main-menu" class="block block-system block-menu">
+<div class="block-inner">
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/start" title="Getting Started with Drupal">Get Started</a></li>
+<li class="leaf"><a href="/community" title="Drupal Community">Community</a></li>
+<li class="leaf"><a href="/documentation" title="Drupal Documentation">Documentation</a></li>
+<li class="leaf"><a href="/support" title="Support for using Drupal">Support</a></li>
+<li class="leaf"><a href="/download" title="Download and Extend Drupal">Download &amp; Extend</a></li>
+<li class="leaf"><a href="/drupal-services" title="Buy Drupal Products and Services">Marketplace</a></li>
+<li class="last leaf"><a href="/about" title="About Drupal">About</a></li>
+</ul>  </div>
+  </div>
+</div>
+  </div>
+        </div> <!-- /#nav-header -->
+
+        <div id="header-content">
+          <div id="header-left">
+            <div id="header-left-inner">
+              <div id="site-name"><a href="/" title="Drupal">Drupal</a></div>
+                          </div> <!-- /#header-left-inner -->
+          </div> <!-- /#header-left -->
+
+          <div id="header-right">
+            <div id="header-right-inner" role="search">
+                <div class="region region-header">
+    <div id="block-search-form" class="block block-search">
+<div class="block-inner">
+    
+  <div class="content">
+    <form action="/node/2194551" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input placeholder="Search Drupal.org" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><div id="search-theme-form-advanced"><fieldset class="collapsible collapsed form-wrapper" id="edit-advanced"><legend><span class="fieldset-legend">Refine your search</span></legend><div class="fieldset-wrapper"><div id="edit-meta-type" class="form-radios"><div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-" name="meta_type" value="" checked="checked" class="form-radio" />  <label class="option" for="edit-meta-type-">All </label>
+
+</div>
+<div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-module" name="meta_type" value="module" class="form-radio" />  <label class="option" for="edit-meta-type-module">Modules </label>
+
+</div>
+<div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-theme" name="meta_type" value="theme" class="form-radio" />  <label class="option" for="edit-meta-type-theme">Themes </label>
+
+</div>
+<div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-documentation" name="meta_type" value="documentation" class="form-radio" />  <label class="option" for="edit-meta-type-documentation">Documentation </label>
+
+</div>
+<div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-forum-issues" name="meta_type" value="forum-issues" class="form-radio" />  <label class="option" for="edit-meta-type-forum-issues">Forums &amp; Issues </label>
+
+</div>
+<div class="form-item form-type-radio form-item-meta-type">
+ <input type="radio" id="edit-meta-type-group" name="meta_type" value="group" class="form-radio" />  <label class="option" for="edit-meta-type-group">Groups </label>
+
+</div>
+</div></div></fieldset>
+</div><input type="hidden" name="form_build_id" value="form-_2YYNC-0PY0yAy5NO-B67G7jAfAUAQlnCbxDYQqArNw" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+  </div>
+</div>
+  </div>
+            </div> <!-- /#header-right-inner -->
+          </div> <!-- /#header-right -->
+        </div> <!-- /#header-content -->
+
+        <div id="nav-masthead" role="navigation">
+          <ul><li class="homepage first"><a href="/home">Drupal Homepage</a></li>
+<li class="login-register last"><a href="/user?destination=node/2194551">Log in / Register</a></li>
+</ul>        </div> <!-- /#nav-masthead -->
+      </div> <!-- /#header-inner -->
+    </div>
+  </div> <!-- /#header -->
+
+  <div id="page" class="container-12 clearfix">
+    <div id="page-inner">
+
+      <div id="page-heading">
+
+                  <div id="page-title-tools" class="clearfix" role="navigation">
+
+            <div class="page-title-wrapper">
+                                                <div id="page-title" class="h2">Download &amp; Extend</div>
+                                          </div>
+
+                          <div id="page-tools"></div>
+                      </div> <!-- /#page-title-tools -->
+
+                      <div id="nav-content">
+              <ul class="links"><li class="home first"><a href="/download">Download &amp; Extend Home</a></li>
+<li class="core"><a href="/project/drupal">Drupal Core</a></li>
+<li class="distributions"><a href="/project/project_distribution">Distributions</a></li>
+<li class="modules active"><a href="/project/project_module" class="active">Modules</a></li>
+<li class="themes last"><a href="/project/project_theme">Themes</a></li>
+</ul>            </div> <!-- /#nav-content -->
+          
+          <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/project/ctools">Chaos tool suite (ctools)</a> » <a href="/node/343333/release">Releases</a></div>
+                      <h1 id="page-subtitle">ctools 7.x-1.4</h1>
+          
+        
+      </div> <!-- /#page-heading -->
+
+      <div id="main" role="main">
+        
+        
+        <div id="content" class="clearfix">
+                                        <div id="content-inner" class="clearfix">  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+<div class="block-inner">
+    
+  <div class="content">
+    <div id="node-2194551" class="node node-project-release node-content-2194551 clearfix">
+
+  
+      
+      <div class="submitted">
+      Posted by <a href="/u/japerry" title="View user profile." data-uid="45640" class="username">japerry</a> on <time pubdate datetime="1392217569">February 12, 2014 at 3:06pm</time>    </div>
+  
+  <div class="content">
+    <h3>Release notes</h3><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>This version of ctools is a accumulation of several patches from <span class="project-issue-issue-link project-issue-status-info project-issue-status-7"><a href="/node/2129033" title="Status: Closed (fixed)">#2129033: [Meta] CTools 7.x-1.4 release </a></span>, and includes 2 security updates as well.  See SA-CONTRIB-2014-013</p>
+<p>Changes since 2013-04-04:</p>
+<ul><li>Respect access calls when displaying content within a relationship context</li>
+<li>Change ctools autocomplete to not include usernames or show titles to users in certain conditions.</li>
+<li><a href="/node/1928122" rel="nofollow">#1928122</a> by andrewbelcher: check for a positioned parent and then filtering on modals</li>
+<li><a href="/node/1947680" rel="nofollow">#1947680</a> by maximpodorov: Fix extra field renderer</li>
+<li><a href="/node/2007364" rel="nofollow">#2007364</a> by ericduran: Fix broken vertical tabs within ctools modal display</li>
+<li><a href="/node/2049087" rel="nofollow">#2049087</a> by maximpodorov: add more caching to ctools_token_content_type_content_types</li>
+<li><a href="/node/1168272" rel="nofollow">#1168272</a> by juves, Berdir: blocks are shown untranslated</li>
+<li><a href="/node/2186405" rel="nofollow">#2186405</a> by japerry: Change function names of internal ctools uuid functions to avoid conflicts with uuid module.</li>
+<li><a href="/node/2108413" rel="nofollow">#2108413</a> by gmclelland: Add edit link for custom content panes</li>
+<li><a href="/node/1446626" rel="nofollow">#1446626</a> by Letharion, Summit: Add term depth access variant to ctools</li>
+<li><a href="/node/1360310" rel="nofollow">#1360310</a> by jherencia: Fix Undefined index notices for form builder</li>
+<li><a href="/node/1482968" rel="nofollow">#1482968</a> by JordanMagnuson, andrewbelcher: Open modal on form submission</li>
+<li><a href="/node/2016559" rel="nofollow">#2016559</a> by hefox: Non-numeric pager_id causes a loop that just won't stop</li>
+<li><a href="/node/2014225" rel="nofollow">#2014225</a> by jchatard: fix fatal error with __clone method called on non-object</li>
+<li><a href="/node/1992680" rel="nofollow">#1992680</a> by iamjon: Check if class is 'views_content_plugin_display_panel_pane' ignores classes that extend it</li>
+<li><a href="/node/1954794" rel="nofollow">#1954794</a> by rsmylski: Fix Undefined index with "Multiple Terms from node" relationship</li>
+<li><a href="/node/1917658" rel="nofollow">#1917658</a> by codycraven: Empty context value results in missing argument in views argument</li>
+<li><a href="/node/1863166" rel="nofollow">#1863166</a> by Jorrit: Bad arguments when first optional context argument is unavailable</li>
+<li><a href="/node/1760752" rel="nofollow">#1760752</a> by netsensei: Tiny int should not be exported as a boolean</li>
+<li><a href="/node/1570996" rel="nofollow">#1570996</a> by makangus: ctools-collapsed class should be removed when container is not collapsed</li>
+<li><a href="/node/1292098" rel="nofollow">#1292098</a> by mikeker: Check to see if an entity exists before injecting to context</li>
+<li><a href="/node/539534" rel="nofollow">#539534</a> by regilero: remove duplicate ctools_css_cache entry</li>
+<li><a href="/node/1921612" rel="nofollow">#1921612</a> by DamienMcKenna: page_slogan.inc pane shouldn't care if the theme wants the slogan displayed</li>
+<li><a href="/node/1524598" rel="nofollow">#1524598</a> by bleen18: make form_state build be true when you add a submit function</li>
+<li><a href="/node/1916272" rel="nofollow">#1916272</a> by Jorrit: Fix errors caused by using drupal_not_found</li>
+<li><a href="/node/2010124" rel="nofollow">#2010124</a> by davidwhthomas: Context doesn't fully load user</li>
+<li><a href="/node/1964434" rel="nofollow">#1964434</a> by rafaqz: Allow tokens with depth greater than 1</li>
+<li><a href="/node/1157526" rel="nofollow">#1157526</a> by Hass, Starminder: Resolve PDOException when upgrading from 6 to 7 with profile_field</li>
+<li><a href="/node/2026655" rel="nofollow">#2026655</a> by AndreyMaximov: Fatal error if node revision argument is used</li>
+<li><a href="/node/2001370" rel="nofollow">#2001370</a> by Spleshka: Modal dialog invokes Drupal.attachBehaviors() with wrong params</li>
+<li><a href="/node/2049087" rel="nofollow">#2049087</a> by das-peter, ezra-g: Add static caching to ctools_token_content_type_content_types()</li>
+<li><a href="/node/2174235" rel="nofollow">#2174235</a> by imavers: Comment fix for hook_schema implementation.</li>
+<li><a href="/node/1928122" rel="nofollow">#1928122</a> by jlapp: Autocomplete position incorrect when in a modal dialog</li>
+<li><a href="/node/2155825" rel="nofollow">#2155825</a> followup, harden ctools uuid variable detection</li>
+<li><a href="/node/2183589" rel="nofollow">#2183589</a> by daniel-hurd, japerry: Missing semicolon ' &amp;raquo ; ' in page-manager.</li>
+<li><a href="/node/2155825" rel="nofollow">#2155825</a> by japerry: Add UUID generation functionality to CTools</li>
+<li><a href="/node/1586324" rel="nofollow">#1586324</a> by das_ricardo, mstrelan, jwilson3, R.Hendel: Fixed Exporting a taxonomy term page manager variant with vocabulary selection rules exports vid instead of machine_name().</li>
+<li>Fix notice error if a panel pane display is deleted while still in use.</li>
+<li><a href="/node/1989476" rel="nofollow">#1989476</a> by tim.plunkett: Allow content types to define an access callback for create/add.</li>
+<li><a href="/node/1925018" rel="nofollow">#1925018</a> by DamienMcKenna, BerdArt, tim.plunkett: Fixed admin UI error from blocks containing render arrays.</li>
+</ul></div></div></div><div class="view view-project-release-files view-id-project_release_files view-display-id-default view-dom-id-1ff321ef288e6c348bb0fcae22e8bfcd">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-3" >
+         <thead>
+      <tr>
+                  <th class="views-field views-field-field-release-file" >
+            Download          </th>
+                  <th class="views-field views-field-filesize" >
+            Size          </th>
+                  <th class="views-field views-field-field-release-file-hash" >
+            md5 hash          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-field-release-file" >
+            <span class="file"><img class="file-icon" alt="" title="application/octet-stream" src="/modules/file/icons/application-octet-stream.png" /> <a href="http://ftp.drupal.org/files/projects/ctools-7.x-1.4.tar.gz" type="application/octet-stream; length=415678">ctools-7.x-1.4.tar.gz</a></span>          </td>
+                  <td class="views-field views-field-filesize" >
+            405.94 KB          </td>
+                  <td class="views-field views-field-field-release-file-hash" >
+            df1ce5aeb6a9a5c383d944a2a7494f18          </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-field-release-file" >
+            <span class="file"><img class="file-icon" alt="" title="application/zip" src="/modules/file/icons/package-x-generic.png" /> <a href="http://ftp.drupal.org/files/projects/ctools-7.x-1.4.zip" type="application/zip; length=633201">ctools-7.x-1.4.zip</a></span>          </td>
+                  <td class="views-field views-field-filesize" >
+            618.36 KB          </td>
+                  <td class="views-field views-field-field-release-file-hash" >
+            dbde17e8df9f710d27fdd15d97396b75          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div><div class="last-updated">Last updated: February 12, 2014 - 15:58</div><a href="/list-changes/ctools?version=7.x-1.4">View change notices for this release</a><div class="field field-name-field-release-vcs-label field-type-text field-label-inline clearfix"><div class="field-label">Official release from tag:&nbsp;</div><div class="field-items"><div class="field-item even">7.x-1.4</div></div></div>  </div>
+
+  <div class="node-footer"><ul class="links inline"><li class="node-usage first last"><a href="/project/usage/2194551">View usage statistics for this release</a></li>
+</ul><span class="separator">⋅</span> <span class="terms">Categories: <a href="/taxonomy/term/103">7.x</a>, <a href="/taxonomy/term/100">Security update</a>, <a href="/taxonomy/term/99">Bug fixes</a>, <a href="/taxonomy/term/98">New features</a></div>
+
+</div>
+
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+                  </div> <!-- /#content -->
+
+      </div> <!-- /#column-left -->
+
+      
+          </div> <!-- /#page-inner -->
+  </div> <!-- /#page -->
+
+  <div id="footer" role="contentinfo">
+    <div id="footer-inner" class="container-12 clearfix">
+              <div id="footer-region">
+          <div id="footer-region-inner" class="clearfix">
+              <div class="region region-footer">
+    <div class="doormat clearfix"><h4 class="element-invisible">News Items</h4><ul class="drupal-news"><li class="0 first"><a href="https://www.drupal.org/news">Drupal News</a></li>
+<li class="1"><a href="https://www.drupal.org/planet" title="News from Drupal community members">Planet Drupal</a></li>
+<li class="2"><a href="https://association.drupal.org/news" title="News from association.drupal.org">Association News</a></li>
+<li class="3"><a href="https://www.drupal.org/social-media" title="Drupal on social media">Social Media Directory</a></li>
+<li class="4"><a href="https://www.drupal.org/security" title="Advisories from the security team">Security Announcements</a></li>
+<li class="5 last"><a href="https://jobs.drupal.org/" title="Drupal Jobs">Jobs</a></li>
+</ul><h4 class="element-invisible">Our Community</h4><ul class="community"><li class="0 first"><a href="https://drupal.org/community">Community</a></li>
+<li class="1"><a href="https://drupal.org/getting-involved" title="Learn how to contribute to the Drupal project">Getting Involved</a></li>
+<li class="2"><span><a href="https://drupal.org/drupal-services" title="People and organizations offering Drupal services">Services</a>, <a href="https://drupal.org/training" title="People and organizations offering Drupal training">Training</a> & <a href="https://drupal.org/hosting" title="Organizations offering Drupal hosting">Hosting</a></span></li>
+<li class="3"><a href="https://groups.drupal.org/groups" title="groups.drupal.org">Groups &amp; Meetups</a></li>
+<li class="4"><a href="https://drupal.org/drupalcon" title="Upcoming and past DrupalCons">DrupalCon</a></li>
+<li class="5 last"><a href="https://drupal.org/dcoc" title="Drupal Code of Conduct">Code of Conduct</a></li>
+</ul><h4 class="element-invisible">Online Documentation</h4><ul class="get-started"><li class="0 first"><a href="https://drupal.org/start">Get Started</a></li>
+<li class="1"><a href="https://drupal.org/documentation" title="Guidebooks and documentation for working with Drupal">Documentation Home</a></li>
+<li class="2"><a href="https://drupal.org/documentation/install" title="Guide for installing Drupal">Installation Guide</a></li>
+<li class="3"><a href="https://drupal.org/documentation/build" title="Guide for building and extending Drupal sites">Site Building Guide</a></li>
+<li class="4"><a href="https://drupal.org/support" title="Drupal support options">Support</a></li>
+<li class="5 last"><a href="https://api.drupal.org/" title="Drupal API Reference">api.drupal.org</a></li>
+</ul><h4 class="element-invisible">Drupal Code Base</h4><ul class="download-extend"><li class="0 first"><a href="https://drupal.org/download">Download &amp; Extend</a></li>
+<li class="1"><a href="https://drupal.org/project/drupal" title="Download the latest version of the Drupal software">Drupal Core</a></li>
+<li class="2"><a href="https://drupal.org/project/project_module" title="Download add-on features and functionality">Modules</a></li>
+<li class="3"><a href="https://drupal.org/project/project_theme" title="Download pre-designed styles for Drupal">Themes</a></li>
+<li class="4 last"><a href="https://drupal.org/project/project_distribution" title="Download a pre-packaged Drupal site">Distributions</a></li>
+</ul><h4 class="element-invisible">Governance of Community</h4><ul class="about"><li class="0 first"><a href="https://drupal.org/about">About</a></li>
+<li class="1"><a href="https://drupal.org/about/accessibility" title="Our committment to accessibility">Web accessibility</a></li>
+<li class="2"><a href="https://association.drupal.org/about" title="About the Drupal Association">The Drupal Association</a></li>
+<li class="3"><a href="https://drupal.org/about-drupalorg" title="About Drupal.org">About Drupal.org</a></li>
+<li class="4"><a href="https://drupal.org/terms" title="Drupal.org Terms of Service">Terms of Service</a></li>
+<li class="5 last"><a href="https://drupal.org/privacy" title="Drupal.org Privacy Policy">Privacy Policy</a></li>
+</ul></div><div id="block-block-77" class="block block-block">
+<div class="block-inner">
+    
+  <div class="content">
+    <p>Drupal is a <a href="http://drupal.com/trademark" rel="nofollow">registered trademark</a> of <a href="http://buytaert.net" rel="nofollow">Dries Buytaert</a>.</p>
+  </div>
+  </div>
+</div>
+  </div>
+          </div> <!-- /#footer-region-inner -->
+        </div> <!-- /#footer-region -->
+          </div> <!-- /#footer-inner -->
+  </div> <!-- /#footer -->
+    <div class="region region-page-bottom">
+    <div><a rel="nofollow" href="http://drupal.org/sites/all/modules/httpbl/donotremove.php" style="display: none;">nobody click here</a></div>  </div>
+</body>
+</html>
