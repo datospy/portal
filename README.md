@@ -9,7 +9,7 @@ Para replicar este portal debes hacer
     git clone https://github.com/datospy/portal
     mv portal/ drupal/
 
-Crear base de datos postgres
+Crear base de datos postgres  
     DB:drupal
     user:drupal
     pass:password
