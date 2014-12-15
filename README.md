@@ -21,6 +21,6 @@ Importar la base de datos portal.sql
 Configurar el apache   
 
 Auntenticacion del portal   
-     user:admin
-     pass:admin
+     user:admin  
+     pass:admin 
 
