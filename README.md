@@ -8,6 +8,8 @@ Para replicar este portal debes hacer
 cd /var/www/html
 git clone https://github.com/datospy/portal
 
+mv portal/ drupal/
+
 Importar la base de datos portal.sql
 
 psql drupal < infile
