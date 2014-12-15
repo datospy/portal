@@ -10,9 +10,9 @@ Para replicar este portal debes hacer
     mv portal/ drupal/
 
 Crear base de datos postgres  
-        DB:drupal  
-        user:drupal  
-        pass:password  
+            DB:drupal  
+            user:drupal  
+            pass:password  
 Importar la base de datos portal.sql
 
     psql drupal < portal.sql
@@ -20,3 +20,7 @@ Importar la base de datos portal.sql
 
 Configurar el apache
 
+Auntenticacion del portal 
+        user:admin
+        pass:admin
+        
