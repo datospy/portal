@@ -11,7 +11,7 @@ Para replicar este portal debes hacer
 
 Importar la base de datos portal.sql
 
-psql drupal < infile
+    psql drupal < infile
 
 
 Configurar el apache
