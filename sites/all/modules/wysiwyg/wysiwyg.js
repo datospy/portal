@@ -43,7 +43,7 @@ Drupal.behaviors.attachWysiwyg = {
       return;
     }
 
-    $('.wysiwyg', context).once('wysiwyg', function () {
+    $('.wysiwyg:not(.processed)', context).addClass('processed').each(function() {
       if (!this.id || typeof Drupal.settings.wysiwyg.triggers[this.id] === 'undefined') {
         return;
       }

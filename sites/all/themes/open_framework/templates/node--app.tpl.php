@@ -81,65 +81,16 @@
 
 
 <style type="text/css">
-.app .views-row {
-clear: right; 
-margin-bottom: 1em;
-margin-right: 5%;
-width: 40%;
-/* margin: 0px; */
-float: left;
-}
-
-
-.field-label {
-display: none;
-}
-
-.app img {
-  max-width: 90%;
-}
-
-
-.user-picture img {
-border: solid;
-border-radius: 55px;
-border: solid #187794;
-width: 55px;
-}
-
-.user-picture {
-float: left;
-margin-right: 20px;
-margin-top: 10px;
-}
-
-.node-app{
-padding: 20px;
-
-}
-
-.comment .submitted {
-margin-bottom: 1em;
-font-size: 10px;
-margin-top: -20px;
-font-style: italic;
-
-}
-
-
-.node .submitted {
-margin-bottom: 1em;
-font-size: 14px;
-margin-top: 20px;
-font-style: italic;
-margin-bottom: 30px;
-}
 
 </style>
+
+  <?php if (!$page): ?>
+
+  
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>> <?php print $user_picture; ?> <?php print render($title_prefix); ?>
  
 
-  <?php if (!$page): ?>
+
 
 
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
@@ -163,6 +114,8 @@ margin-bottom: 30px;
         <?php //print render($content['links']); ?> <?php print render($content['comments']); ?> </article>
 
   <?php else: ?>
+  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>> <?php print $user_picture; ?> <?php print render($title_prefix); ?>
+
 
 <?php
       // We hide the comments and links now so that we can render them later.

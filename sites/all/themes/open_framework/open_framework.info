@@ -1,8 +1,8 @@
-name = Open Framework
-description = Responsive base theme built with Twitter Bootstrap. Learn more at the <a href="http://openframework.stanford.edu">Open Framework website</a>.
-core = 7.x
-version = 7.x-2.1
-project = "open_framework"
+name = Datospy
+description = Responsive base theme built with Twitter Bootstrap for the portal of datos.org.py. Learn more at the <a href="http://openframework.stanford.edu">Open Framework website</a>.
+core = 1.x
+version = 1.0.1
+project = "Datospy"
 
 stylesheets[all][] = packages/bootstrap-2.3.1/css/bootstrap.min.css
 stylesheets[all][] = packages/bootstrap-2.3.1/css/bootstrap-responsive.min.css
@@ -14,6 +14,9 @@ scripts[] = packages/bootstrap-2.3.1/js/bootstrap.min.js
 scripts[] = js/open_framework.js
 scripts[] = js/jquery.placeholder.min.js
 scripts[] = js/override.js
+
+
+
 
 regions[admin_shortcuts] = Admin Shortcuts (Authenticated Users Only)
 regions[site_login] = Site: Login

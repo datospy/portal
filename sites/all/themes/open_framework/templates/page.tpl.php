@@ -11,6 +11,7 @@
 
 <!-- ---------------------------------------------------------------------------- -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
 <style>
   #main, .main, [role=main]{
     background: #FFF !important;
@@ -18,10 +19,12 @@
   }
 </style>
 
-
+<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/css/main.min.css" />
+<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/vendor/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/datos/fanstatic/datospy_theme/datospy_thememin.css">
 
 <script type="text/javascript">
-  $(document).ready(function(){
+$(document).ready(function(){
   //menu usuario
   $("#botonUser").click(function () {
       $("#panelUser").each(function() {
@@ -68,17 +71,15 @@
       $("#boton4").parents().addClass("active");
   }
 
-});
-</script>
-    <!--[if lte ie 8]><script type="text/javascript" src="http://datos.org.py/datos/datos/fanstatic/vendor/:version:2014-11-04T18:07:34.47/html5.min.js"></script><![endif]-->
-<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/vendor/select2/select2.css" />
-<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/css/main.min.css" />
-<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/vendor/font-awesome/css/font-awesome.min.css" />
-<!--[if ie 7]><link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/datos/fanstatic/vendor/:version:2014-11-04T18:07:34.47/font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
-<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/datos/fanstatic/ckanext-harvest/styles/harvest.css" />
-<link rel="stylesheet" type="text/css" href="/datos/fanstatic/datospy_theme/datospy_theme.css">
-<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/datos/fanstatic/datospy_theme/styles/introjs.css" />
+  var pathname = window.location.pathname;
+  var loginpath = "http://www.datos.org.py/user/login?destination=";
+  $("#loginRedirect").attr("href", loginpath.concat(pathname));
 
+});
+
+
+
+</script>
 
 <style type="text/css">
 
@@ -123,15 +124,7 @@ border: solid #187794;
   margin-bottom: 0px;
 }
 
-.node-app {
 
- border: solid 1px #ddd;
-margin-bottom: 10px;
-padding-left: 10px;
-border-radius: 10px;
-
-
-}
 
 .node .submitted {
 margin-bottom: 1em;
@@ -174,6 +167,75 @@ border: solid #187794;
 float: left;
 }
 
+/******* APP *********/
+.app .views-row {
+clear: right; 
+margin-bottom: 1em;
+margin-right: 5%;
+width: 40%;
+/* margin: 0px; */
+display: inline-block;
+
+}
+
+
+.field-label {
+display: none;
+}
+
+.app img {
+  max-width: 90%;
+}
+
+
+.user-picture img {
+border: solid;
+border-radius: 55px;
+border: solid #187794;
+width: 55px;
+}
+
+.user-picture {
+float: left;
+margin-right: 20px;
+margin-top: 10px;
+}
+
+
+
+.node-app {
+
+ border: solid 1px #ddd;
+margin-bottom: 10px;
+padding-left: 10px;
+border-radius: 10px;
+padding: 20px;
+
+
+}
+
+.comment .submitted {
+margin-bottom: 1em;
+font-size: 10px;
+margin-top: -20px;
+font-style: italic;
+
+}
+
+
+.node .submitted {
+margin-bottom: 1em;
+font-size: 14px;
+margin-top: 20px;
+font-style: italic;
+margin-bottom: 30px;
+}
+
+
+/* FIN APP*/
+
+
+
 /* FORO*/
 .forum-post-panel-main {
 margin-left: 150px;
@@ -192,6 +254,10 @@ border-radius: 14px;
 .user-picture img {
 border-radius: 60px;
 border: solid #6EBCDB;
+}
+
+.forum-table-superheader .forum-table-name {
+  display: none;
 }
 
 .forum-post-info.clearfix {
@@ -238,6 +304,11 @@ filter: alpha(opacity=40);
 
 
 
+
+
+
+
+
 /* FIN FORO*/
 .comment {
 border: solid #ddd 1px;
@@ -245,9 +316,33 @@ border-radius: 10px;
 padding-left: 10px;
 }
 
-
-
 </style>
+
+
+<link rel="stylesheet" type="text/css" href="http://www.datos.org.py/datos/fanstatic/datospy_theme/styles/colorbox.css" />
+<link rel="stylesheet" type="text/css" href="http://www.datos.org.py/datos/fanstatic/datospy_theme/scripts/jquery.colorbox-min.js" />
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "8011e22b-d42d-421d-8d9d-d2494ea9aaf0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".inline").colorbox({inline:true, width:"50%"});
+});
+</script>
+
+<!-- This contains the hidden content for inline calls -->
+<div style='display:none'>
+  <div id='inline_content' style='padding:10px; background:#fff; text-align: center;'>
+  <span class='st_facebook_vcount' displayText='Facebook'></span>
+  <span class='st_twitter_vcount' displayText='Tweet'></span>
+  <span class='st_googleplus_vcount' displayText='Google +'></span>
+  <span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+  <span class='st_print_vcount' displayText='Print'></span>
+  <span class='st_email_vcount' displayText='Email'></span>
+  </div>
+</div>
+
 
 <header class="masthead">
   <div class="container">
@@ -287,7 +382,7 @@ padding-left: 10px;
 
             <?php if ((($user->uid) && ($page['admin_shortcuts'])) || (($user->uid) && ($secondary_nav))): ?>
 
-                <?php echo ' <a href="#" id="botonCerrarUser">[x]</a>
+                <?php echo '
             <ul class="unstyled">
               
               
@@ -314,7 +409,7 @@ padding-left: 10px;
                 echo '
                 <ul class="unstyled"> 
                   <li>
-                    <a href="/user/login" class="image" title="Ver perfil">Iniciar Sesión</a>
+                    <a id="loginRedirect" href="/user/login" class="image" title="Ver perfil">Iniciar Sesión</a>
                   </li>           
                 </ul>';
 
@@ -336,7 +431,7 @@ padding-left: 10px;
     <ul>
     <li><a href="/datos/dataset">Conjuntos de datos</a></li>
     <li><a href="/datos/organization">Organizaciones</a></li>
-    <li><a href="/datos/group">Grupos</a></li>
+    <li><a href="/datos/group">Temas</a></li>
     <li><a href="/datos/dataset/new" title="Crear DataSet">Crear DataSet</a></li>
     </ul>
   </div>
@@ -348,12 +443,15 @@ padding-left: 10px;
       <li><a href="/blog" title="Blog">Blog</a></li>
       <li><a href="/forum" title="Foro">Foro</a></li>
       <li><a href="/docs" title="Docs">Docs</a></li>
-      <li><a href="#">Compartir</a></li>
+      <li><a href="#inline_content" title="Compartir" class='inline'>Compartir</a></li>
     </ul>
   </div>
 </div>
 
-
+<?php
+if ($title == 'No tiene permisos') {
+header( 'Location: /user/login?destination=' . substr ($_SERVER['REQUEST_URI'],1 ) ); 
+} ?>
 
 <!-- ---------------------------------------------------------------------------- -->
 
