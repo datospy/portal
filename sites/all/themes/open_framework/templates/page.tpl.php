@@ -424,7 +424,7 @@ overflow: hidden;
   <div class="container">
     <hgroup class="header-image">
 
-          <a class="logo" href="/"><img data-step="1" data-intro='Bienvenidos al portal de Datos abiertos de la Sociedad Civil' src="/datos/img/logo_final_blanco_chico.png" alt="DatosPy Logo" title="DatosPy Logo" /></a>
+          <a class="logo" href="/"><img  data-intro='Bienvenidos al portal de Datos abiertos de la Sociedad Civil' src="/datos/img/logo_final_blanco_chico.png" alt="DatosPy Logo" title="DatosPy Logo" /></a>
 
     </hgroup>
 
@@ -505,7 +505,7 @@ print drupal_render($form); ?>
    <?php if ((($user->uid) && ($page['admin_shortcuts'])) || (($user->uid) && ($secondary_nav))): ?>
 
 
-    <?php echo '<i data-step="3" data-intro="Editá tu perfil y mirá tus nofificaciones desde acá" 
+    <?php echo '<i data-intro="Editá tu perfil y mirá tus nofificaciones desde acá" 
     class="avatarx" href="#" id="botonUser"> ';
           ?>
            <?php
@@ -518,7 +518,7 @@ print drupal_render($form); ?>
 
     <?php else:
 
-            echo '<a data-step="3" data-intro="Iniciá sesión para poder participar del portal"
+            echo '<a  data-intro="Iniciá sesión para poder participar del portal"
              href="#" title="Opciones para usuarios" class="user" id="botonUser">User</a>';
     ?>
 
@@ -717,13 +717,33 @@ $( document ).ready(function() {
 document.getElementById('comienzo').onclick = function() {
 
 
+if ("/app"!= window.location.pathname){
 
+        $("#boton1").parent().attr("data-intro","En esta seccion encontratrás todos los conjuntos de datos publicados.");
+        $("#boton2").parent().attr("data-intro","Interactúa con la comunidad de datos abiertos del Paraguay");
+        $("#boton3").parent().attr("data-intro","Lista de todas las apps y visualizaciones hechas por la comunidad");
+        $("#boton4").parent().attr("data-intro","Podes hacer tus pedidos de datos en esta sección");
 
         $("#blog").attr("data-intro","En esta seccion te enterarás de las últimas novedades sobre datos abiertos en el país, la región y el mundo.");
       
         $("#foro").attr("data-intro","En este espacio podés iniciar conversaciones sobre los temas que te interesen, hacer consultas, proponer ideas o participar de los intercambios que se estén desarrollando entre los usuarios del catálogo. ");
 
-         $("#docs").attr("data-intro","Acá podrás encontrar documentos y materiales informativos útiles sobre datos abiertos.");
+        $("#docs").attr("data-intro","Acá podrás encontrar documentos y materiales informativos útiles sobre datos abiertos.");
+
+
+}
+
+else {
+
+$(".node-app").first().attr("data-intro","Se listan todas las aplicaciones y visualizaciones hecchas por la comunidad.");
+}
+
+
+
+
+
+
+        
 
 
        
