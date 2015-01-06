@@ -9,6 +9,8 @@
 <script src="http://datos.org.py/sites/all/themes/open_framework/js/tagcloud-call.js"></script>
 <script src="http://datos.org.py/sites/all/themes/open_framework/js/tag-cloudfunci.js"></script>
 
+<script type='text/javascript' src='http://datos.org.py/sites/all/themes/open_framework/js/jquery.sharrre.min.js'></script>
+
 <script>
     $(function(){
         $('ul#comunidad').circleMenu({
@@ -59,8 +61,6 @@
        $("#boton1").parents().addClass("active");
     }
 
-  $(".inline").colorbox({inline:true, width:"50%"});
-
 });
 </script>
 <style>
@@ -69,19 +69,6 @@
     background: #F1F3F2 url('http://www.datos.org.py/sites/all/themes/open_framework/images/bgGral.jpg') center top no-repeat !important;
   }
 </style>
-
-<!-- This contains the hidden content for inline calls -->
-<div style='display:none'>
-  <div id='inline_content' style='padding:10px; background:#fff; text-align: center;'>
-  <span class='st_facebook_vcount' displayText='Facebook'></span>
-  <span class='st_twitter_vcount' displayText='Tweet'></span>
-  <span class='st_googleplus_vcount' displayText='Google +'></span>
-  <span class='st_linkedin_vcount' displayText='LinkedIn'></span>
-  <span class='st_print_vcount' displayText='Print'></span>
-  <span class='st_email_vcount' displayText='Email'></span>
-  </div>
-</div>
-
 
 <div class="wrap fondo relative">
 
@@ -113,12 +100,9 @@
     <li><a href="http://www.datos.org.py/docs/">Docs</a></li>
     <li><a href="http://www.datos.org.py/forum/">Foros</a></li>
     <li><a href="http://www.datos.org.py/blog/">Blog</a></li>
-    <li><a href="#inline_content" title="Compartir" class="inline">Compartir</a></li>
   </ul>
 
   <ul id="catalogo">
-
-      
     <li><a href="http://www.datos.org.py/datos/dataset" class="circulos">Catalogo</a></li>
     <li><a href="http://www.datos.org.py/datos/dataset">Conjunto de datos</a></li>
     <li><a href="http://www.datos.org.py/datos/organization">Organizaciones</a></li>
@@ -164,16 +148,12 @@ font-size: 30px !important;
 
 <style type="text/css">
 footer{
-
   position: absolute;
-
+  left: 0;
+  right: 0;
   width: 100%;
 }
-
 </style>
-
-
-
 
 <footer>
      <link rel="stylesheet" type="text/css" href="/datos/fanstatic/datospy_theme/datospy_thememin.css">
@@ -183,24 +163,141 @@ footer{
         Con el apoyo del <a href="http://ceamso.org.py/es/proyectos/20-programa-de-democracia-y-gobernabilidad">Programa de Democracia y Gobernabilidad (USAID-CEAMSO)</a>
       </div>
 
-    
-            
-            <a href="/datos/about">Acerca de DatosPY</a><br>
-       
-             <a href="#" style="display:inline-block" class="tw" title="Twitter"></a>
-             <a href="#" style="display:inline-block" class="fb" title="Facebook"></a>
-             <a href="https://github.com/datospy" style="display:inline-block" class="git" title="github"></a>
-          
+      <a href="/datos/about">Acerca de DatosPY</a><br>
 
-            
-         
+      <a href="#" style="display:inline-block" class="tw" title="Twitter"></a>
+      <a href="#" style="display:inline-block" class="fb" title="Facebook"></a>
+      <a href="https://github.com/datospy" style="display:inline-block" class="git" title="github"></a>
+      <div id="example2">
+        <div id="shareme" data-url="http://www.datos.org.py/" data-text="Datos Abiertos del Paraguay"></div>
+      </div>
+      <script>
+      $('#shareme').sharrre({
+        share: {
+          twitter: true,
+          facebook: true,
+          googlePlus: true
+        },
+        template: '<div class="box"><div class="left">Compartir</div><div class="middle"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a><a href="#" class="googleplus">+1</a></div><div class="right">{total}</div></div>',
+        enableHover: false,
+        enableTracking: true,
+        render: function(api, options){
+        $(api.element).on('click', '.twitter', function() {
+          api.openPopup('twitter');
+        });
+        $(api.element).on('click', '.facebook', function() {
+          api.openPopup('facebook');
+        });
+        $(api.element).on('click', '.googleplus', function() {
+          api.openPopup('googlePlus');
+        });
+      }
+      });
+      </script>
+
+      <style type="text/css">
+        #example2{
+          /*float:right;*/
+          display: inline-block;
+          /*margin: 10px 0 0 0;*/
+        }
+        .sharrre .box{
+          background:#969FA8;
+          background:-webkit-gradient(linear,left top,left bottom,color-stop(#969FA8,0),color-stop(#818790,1));
+          background:-webkit-linear-gradient(top, #969FA8 0%, #818790 100%);
+          background:-moz-linear-gradient(top, #969FA8 0%, #818790 100%);
+          background:-o-linear-gradient(top, #969FA8 0%, #818790 100%);
+          background:linear-gradient(top, #969FA8 0%, #818790 100%);
+          filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#969FA8', endColorstr='#818790',GradientType=0 );
+          -webkit-box-shadow:0 1px 1px #d3d3d3;
+          -moz-box-shadow:0 1px 1px #d3d3d3;
+          box-shadow:0 1px 1px #d3d3d3;
+          height:22px;
+          display:inline-block;
+          position:relative;
+          padding:0px 55px 0 8px;
+          -webkit-border-radius:3px;
+          -moz-border-radius:3px;
+          border-radius:3px;
+          font-size:12px;
+          float:left;
+          clear:both;
+          overflow:hidden;
+          -webkit-transition:all 0.3s linear;
+          -moz-transition:all 0.3s linear;
+          -o-transition:all 0.3s linear;
+          transition:all 0.3s linear;
+        }
+        .sharrre .left{
+          line-height:22px;
+          display:block;
+          white-space:nowrap;
+          text-shadow:0px 1px 1px rgba(255,255,255,0.3);
+          color:#ffffff;
+          -webkit-transition:all 0.2s linear;
+          -moz-transition:all 0.2s linear;
+          -o-transition:all 0.2s linear;
+          transition:all 0.2s linear;
+        }
+        .sharrre .middle{
+          position:absolute;
+          height:22px;
+          top:0px;
+          right:30px;
+          width:0px;
+          background:#818790;
+          text-shadow:0px -1px 1px #363f49;
+          color:#fff;
+          white-space:nowrap;
+          text-align:left;
+          overflow:hidden;
+          -webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+          -moz-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+          box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+          -webkit-transition:width 0.3s linear;
+          -moz-transition:width 0.3s linear;
+          -o-transition:width 0.3s linear;
+          transition:width 0.3s linear;
+        }
+        .sharrre .middle a{
+          color:#fff;
+          font-weight:bold;
+          padding:0 9px 0 9px;
+          text-align:center;
+          float:left;
+          line-height:22px;
+          -webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+          -moz-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+          box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+        }
+        .sharrre .right{
+          position:absolute;
+          right:0px;
+          top:0px;
+          height:100%;
+          width:45px;
+          text-align:center;
+          line-height:22px;
+          color:#4b5d61;
+          background:#D7DADB;
+          background:-webkit-gradient(linear,left top,left bottom,color-stop(#D7DADB,0),color-stop(#C9CCCC,1));
+          background:-webkit-linear-gradient(top, #D7DADB 0%, #C9CCCC 100%);
+          background:-moz-linear-gradient(top, #D7DADB 0%, #C9CCCC 100%);
+          background:-o-linear-gradient(top, #D7DADB 0%, #C9CCCC 100%);
+          background:linear-gradient(top, #D7DADB 0%, #C9CCCC 100%);
+          filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#D7DADB', endColorstr='#C9CCCC',GradientType=0 );
+        }
+        .sharrre .box:hover{
+          padding-right:130px;
+        }
+        .sharrre .middle a:hover{
+          text-decoration:none;
+        }
+        .sharrre .box:hover .middle{
+          width:90px;
+        }
+      </style>
+
     </div>
-
-
-
-    
-        
-        
-  
 
 </footer>

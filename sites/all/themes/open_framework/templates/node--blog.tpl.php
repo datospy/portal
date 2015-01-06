@@ -130,6 +130,16 @@ padding-left: 35px;
 border-radius: 10px;
 }
 
+.node-blog ul.action-links {
+list-style-type: none;
+background: #D7DADB;
+border-radius: 2px;
+padding-left: 20px;
+padding-bottom: 5px;
+padding-top: 5px;
+width: 21%;
+}
+
 
 </style>
 

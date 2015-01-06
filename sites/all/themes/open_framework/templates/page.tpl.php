@@ -8,18 +8,25 @@
 
 <!--<div id="admin-shortcuts" class="admin-shortcuts clearfix"> <?php //print render($secondary_nav); ?> <?php// print render($page['admin_shortcuts']); ?> </div>-->
 <?php endif; ?>
+<link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/datospy_theme/styles/introjs.min.css" />
 
 <!-- ---------------------------------------------------------------------------- -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://datos.org.py/datos/fanstatic/datospy_theme/scripts/intromin.js"></script>
+
 
 <style>
   #main, .main, [role=main]{
     background: #FFF !important;
     background-image: none !important;
+    padding-bottom: 200px !important;
+    min-height: 50% !important;
   }
 </style>
 
 <link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/css/main.min.css" />
+
+
 <link rel="stylesheet" type="text/css" href="http://datos.org.py/datos/fanstatic/vendor/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/datos/fanstatic/datospy_theme/datospy_thememin.css">
 
@@ -71,7 +78,8 @@ $(document).ready(function(){
       $("#boton4").parents().addClass("active");
   }
 
-  var pathname = window.location.pathname;
+  var pathname = window.location.pathname.substring(1);
+
   var loginpath = "http://www.datos.org.py/user/login?destination=";
   $("#loginRedirect").attr("href", loginpath.concat(pathname));
 
@@ -79,257 +87,325 @@ $(document).ready(function(){
 
 
 
+
+
+
 </script>
 
 <style type="text/css">
 
-.masthead .account #botonCerrarUser {
-color: #333;
-text-decoration: none;
-position: absolute;
-top: 0px;
-right: 3px;
-font-size: 11px;
-}
+    .masthead .account #botonCerrarUser {
+    color: #333;
+    text-decoration: none;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    font-size: 11px;
+    }
 
-.clearfix:after {
-content: "";
-display: block;
-height: 0;
-clear: both;
-visibility: hidden;
-}
+    .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
 
-.node-blog {
-border: solid 1px #ddd;
-margin-bottom: 10px;
-padding-left: 10px;
-border-radius: 10px;
-}
-.node-blog .user-picture {
-float: left;
-margin-right: 20px;
-margin-top: 10px;
-}
-
-.node-blog .user-picture img {
-border: solid;
-border-radius: 55px;
-border: solid #187794;
-
+    ul.action-links {
+list-style-type: none;
+background: #D7DADB;
+border-radius: 2px;
+padding-left: 20px;
+padding-bottom: 5px;
+padding-top: 5px;
+width: 21%;
 }
 
 
-.node-blog h2{
-  margin-bottom: 0px;
-}
+    .node-blog {
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    }
+    .node-blog .user-picture {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    }
 
-
-
-.node .submitted {
-margin-bottom: 1em;
-font-size: 10px;
-margin-top: -7px;}
-
-
-
-.node-solicitudes {
-border: solid 1px #ddd;
-margin-bottom: 10px;
-padding-left: 10px;
-border-radius: 10px;
-}
-.node-solicitudes .user-picture {
-float: left;
-margin-right: 20px;
-margin-top: 10px;
-}
-
-.node-solicitudes .user-picture img {
-border: solid;
-border-radius: 55px;
-border: solid #187794;
-
-}
-
-
-.node-solicitudes h2{
-  margin-bottom: 0px;
-}
-
-.field-name-field-voto-solicitud .field-label {
-
-  display: none;
-}
-
-
-.field-name-field-voto-solicitud .fivestar-oxygen {
-float: left;
-}
-
-/******* APP *********/
-.app .views-row {
-clear: right; 
-margin-bottom: 1em;
-margin-right: 5%;
-width: 40%;
-/* margin: 0px; */
-display: inline-block;
-
-}
-
-
-.field-label {
-display: none;
-}
-
-.app img {
-  max-width: 90%;
-}
+    .node-blog .user-picture img {
+    border: solid;
+    border-radius: 55px;
+    border: solid #187794;
+   
+    }
 
 
 .user-picture img {
-border: solid;
-border-radius: 55px;
-border: solid #187794;
-width: 55px;
+
+  max-width: 48px;
+  max-height:48px;
 }
 
-.user-picture {
-float: left;
-margin-right: 20px;
-margin-top: 10px;
-}
+    .node-blog h2{
+      margin-bottom: 0px;
+    }
 
 
 
-.node-app {
-
- border: solid 1px #ddd;
-margin-bottom: 10px;
-padding-left: 10px;
-border-radius: 10px;
-padding: 20px;
+    .node .submitted {
+    margin-bottom: 1em;
+    font-size: 10px;
+    margin-top: -7px;}
 
 
-}
 
-.comment .submitted {
-margin-bottom: 1em;
-font-size: 10px;
-margin-top: -20px;
-font-style: italic;
+    .node-solicitudes {
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    }
+    .node-solicitudes .user-picture {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    }
 
-}
+    .node-solicitudes .user-picture img {
+    border: solid;
+    border-radius: 55px;
+    border: solid #187794;
+
+    }
 
 
-.node .submitted {
+    .node-solicitudes h2{
+      margin-bottom: 0px;
+    }
+
+   .view-solicitudes .node .submitted {
 margin-bottom: 1em;
 font-size: 14px;
 margin-top: 20px;
 font-style: italic;
 margin-bottom: 30px;
+margin-bottom: 1em;
+font-size: 10px;
+margin-top: -7px;
 }
 
+    .field-name-field-voto-solicitud .field-label {
 
-/* FIN APP*/
-
-
-
-/* FORO*/
-.forum-post-panel-main {
-margin-left: 150px;
- min-height: 100px; 
-height: auto !important;
-height: 230px;
-border-left: solid #ddd;
-}
-
-.forum-post {
-border: solid #ddd;
-border-radius: 14px;
-}
+      display: none;
+    }
 
 
-.user-picture img {
-border-radius: 60px;
-border: solid #6EBCDB;
-}
+    .field-name-field-voto-solicitud .fivestar-oxygen {
+    float: left;
+    }
 
-.forum-table-superheader .forum-table-name {
-  display: none;
-}
+    /******* APP *********/
+    .app .views-row {
+    clear: right; 
+    margin-bottom: 1em;
+    margin-right: 5%;
+    width: 40%;
+    /* margin: 0px; */
+    display: inline-block;
 
-.forum-post-info.clearfix {
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-background-color: #ddd;
-}
+    }
 
-.forum-post-footer.clearfix {
-background-color: #ddd;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
-}
 
-.author-pane {
-text-align: center;
+    .field-label {
+    display: none;
+    }
+
+    .app img {
+      max-width: 90%;
+    }
+
+
+    .user-picture img {
+    border: solid;
+    border-radius: 55px;
+    border: solid #187794;
+    width: 55px;
+    }
+
+    .user-picture {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    }
+
+
+
+    .node-app {
+
+     border: solid 1px #ddd;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    padding: 20px;
+
+
+    }
+
+    .comment .submitted {
+    margin-bottom: 1em;
+    font-size: 10px;
+    margin-top: -20px;
+    font-style: italic;
+
+    }
+
+
+    .node .submitted {
+    margin-bottom: 1em;
+    font-size: 14px;
+    margin-top: 20px;
+    font-style: italic;
+    margin-bottom: 30px;
+    }
+
+
+    /* FIN APP*/
+
+
+
+    /* FORO*/
+    .forum-post-panel-main {
+    margin-left: 150px;
+     min-height: 100px; 
+    height: auto !important;
+    height: 230px;
+    border-left: solid #ddd;
+    }
+
+    .forum-post {
+    border: solid #ddd;
+    border-radius: 14px;
+    }
+
+
+    .user-picture img {
+    border-radius: 60px;
+    border: solid #6EBCDB;
+    }
+
+    .forum-table-superheader .forum-table-name {
+      display: none;
+    }
+
+    .forum-post-info.clearfix {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ddd;
+    }
+
+    .forum-post-footer.clearfix {
+    background-color: #ddd;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
+
+    .author-pane {
+    text-align: center;
+   /* position: relative;*/
+    left: 37px;
+top: 9px;
+
+    }
+    .author-pane a {
+    }
+
+    .forum-post a.username {
+    /*position: absolute;*/
+    /* top: 19px; */
+    right: 45px;
+    text-align: left;
+    /* height: 50px; */
+    bottom: -11px;
+
+
+
+    }
+
+
+
+    .forum-post .user-picture img:hover {
+    border-radius: 60px;
+    border: solid #6EBCDB;
+     opacity: 0.4;
+    filter: alpha(opacity=40);
+
+    }
+
+    /* FIN FORO*/
+    .comment {
+    border: solid #ddd 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    }
+
+
+    header .user-picture {
+width: 27px;
+top: -9px;
 position: relative;
-
-}
-.author-pane a {
 }
 
-.forum-post a.username {
-position: absolute;
-/* top: 19px; */
-right: 45px;
-text-align: left;
-/* height: 50px; */
-bottom: -11px;
-
-
-
-}
-
-
-
-.forum-post .user-picture img:hover {
+ header .user-picture img {
 border-radius: 60px;
-border: solid #6EBCDB;
- opacity: 0.4;
-filter: alpha(opacity=40);
+border: solid #969FA8;
+max-height: 25px;
+max-width: 25px;
+}
 
+header .user-picture img:hover {
+
+
+border: solid #6EBCDB;
 }
 
 
+.search-results li {
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    }
 
+    .masthead div#edit-actions {
 
+      display: none;
+    }
 
+   .masthead   #edit-actions--2 {
+height: 0px;
+padding: 0px;
+margin: 0px;
+}
+    .site-footer {
+      background-image: none;
+    }
 
+    .field.field-name-field-voto-solicitud.field-type-fivestar.field-label-above {
 
-
-/* FIN FORO*/
-.comment {
-border: solid #ddd 1px;
-border-radius: 10px;
-padding-left: 10px;
+overflow: hidden;
 }
 
 </style>
 
 
 <link rel="stylesheet" type="text/css" href="http://www.datos.org.py/datos/fanstatic/datospy_theme/styles/colorbox.css" />
-<link rel="stylesheet" type="text/css" href="http://www.datos.org.py/datos/fanstatic/datospy_theme/scripts/jquery.colorbox-min.js" />
+
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "8011e22b-d42d-421d-8d9d-d2494ea9aaf0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-  $(".inline").colorbox({inline:true, width:"50%"});
-});
-</script>
 
 <!-- This contains the hidden content for inline calls -->
 <div style='display:none'>
@@ -356,53 +432,52 @@ $(document).ready(function(){
         <nav class="section navigation">
           <ul class="nav nav-pills">
             <li><a href="/">Inicio</a></li>
-            <li><a href="#" title="Catálogo" id="boton1">Catálogo</a></li>
-            <li><a href="#" title="Comunidad" id="boton2">Comunidad</a></li>
-            <li><a href="/app" title="Aplicaciones" id="boton3">Aplicaciones</a></li>
-            <li><a href="/solicitudes" title="Solicitá datos" id="boton4">Solicitá datos</a></li>
+            <li ><a href="#" title="Catálogo" id="boton1">Catálogo</a></li>
+            <li  ><a href="#" title="Comunidad" id="boton2">Comunidad</a></li>
+            <li ><a href="/app" title="Aplicaciones" id="boton3">Aplicaciones</a></li>
+            <li ><a href="/solicitudes" title="Solicitá datos" id="boton4">Solicitá datos</a></li>
           </ul>
         </nav>
 
-        <form data-step="2" data-intro='Desde aquí podés buscar los datos que necesitás' class="section site-search simple-input" action="/datos/dataset" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">Buscar datos</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="Buscar datos" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
-          </div>
-        </form>
+
+
+
+<?php 
+
+$form = drupal_get_form('search_block_form');
+
+print drupal_render($form); ?>
       
 
       <a href="javascript:void(0);" title="Ayuda" class="ayuda" id="comienzo">Ayuda</a>
 
     </div>
- 
 
-    <div  data-step="3" data-intro='Editá tu perfil y mirá tus nofificaciones desde acá' class="account avatar authed" data-module="me" data-me="1c0a6e49-87df-4d57-a047-8161c4270340" style="display: none;" id="panelUser">
+         
+    <div   class="account avatar authed" data-module="me" 
+    data-me="1c0a6e49-87df-4d57-a047-8161c4270340" style="display: none;" id="panelUser">
+
             <div class="arrow1"></div>
 
             <?php if ((($user->uid) && ($page['admin_shortcuts'])) || (($user->uid) && ($secondary_nav))): ?>
 
                 <?php echo '
-            <ul class="unstyled">
-              
-              
-              
-                <li>
-                  <a href="/user" title="Mi Cuenta">
-                    <i class="icon-legal"></i>
-                    Mi Cuenta
-                  </a>
-                </li>       
-          
-                <li>
-                  <a href="/user/logout" title="Salir">
-                    <i class="icon-signout"></i>
-                    Salir
-                  </a>
-                </li>
-              
-              
-            </ul>';?>
+                  <ul class="unstyled">
+                      <li>
+                        <a href="/user" title="Mi Cuenta">
+                          <i class="icon-legal"></i>
+                          Mi Cuenta
+                        </a>
+                      </li>       
+                
+                      <li>
+                        <a href="/user/logout" title="Salir">
+                          <i class="icon-signout"></i>
+                          Salir
+                        </a>
+                      </li>
+                  </ul>
+            ';?>
 
               <?php else:
 
@@ -411,17 +486,46 @@ $(document).ready(function(){
                   <li>
                     <a id="loginRedirect" href="/user/login" class="image" title="Ver perfil">Iniciar Sesión</a>
                   </li>           
-                </ul>';
+                </ul>
+                
+                ';
 
                ?>
 
-              <?php endif; ?>
+          <?php endif; ?>
 
 
            
-          </div>
+    </div>
 
-          <a href="#" title="Opciones para usuarios" class="user" id="botonUser">User</a>
+
+          
+         
+
+   <?php if ((($user->uid) && ($page['admin_shortcuts'])) || (($user->uid) && ($secondary_nav))): ?>
+
+
+    <?php echo '<i data-step="3" data-intro="Editá tu perfil y mirá tus nofificaciones desde acá" 
+    class="avatarx" href="#" id="botonUser"> ';
+          ?>
+           <?php
+             global $user;
+              $user = user_load($user->uid);
+              print theme('user_picture', array('account' =>$user));
+
+              echo '</i>';
+          ?>
+
+    <?php else:
+
+            echo '<a data-step="3" data-intro="Iniciá sesión para poder participar del portal"
+             href="#" title="Opciones para usuarios" class="user" id="botonUser">User</a>';
+    ?>
+
+    <?php endif; ?>
+
+
+          
 
   </div>
 </header>
@@ -440,10 +544,9 @@ $(document).ready(function(){
 <div class="sub-menu" id="panel2"> 
   <div class="container">
     <ul>
-      <li><a href="/blog" title="Blog">Blog</a></li>
-      <li><a href="/forum" title="Foro">Foro</a></li>
-      <li><a href="/docs" title="Docs">Docs</a></li>
-      <li><a href="#inline_content" title="Compartir" class='inline'>Compartir</a></li>
+      <li><a id="blog" href="/blog" title="Blog">Blog</a></li>
+      <li><a id="foro" href="/forum" title="Foro">Foro</a></li>
+      <li><a id="docs" href="/docs" title="Docs">Docs</a></li>
     </ul>
   </div>
 </div>
@@ -599,8 +702,57 @@ header( 'Location: /user/login?destination=' . substr ($_SERVER['REQUEST_URI'],1
     <?php endif; ?>
   </div>
 </div>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+    var path = window.location.pathname ;
+
+
+ 
+      
+ // TUTORIAL DE DATASET 
+document.getElementById('comienzo').onclick = function() {
+
+
+
+
+        $("#blog").attr("data-intro","En esta seccion te enterarás de las últimas novedades sobre datos abiertos en el país, la región y el mundo.");
+      
+        $("#foro").attr("data-intro","En este espacio podés iniciar conversaciones sobre los temas que te interesen, hacer consultas, proponer ideas o participar de los intercambios que se estén desarrollando entre los usuarios del catálogo. ");
+
+         $("#docs").attr("data-intro","Acá podrás encontrar documentos y materiales informativos útiles sobre datos abiertos.");
+
+
+       
+
+       introJs().setOptions({ 'skipLabel': 'Finalizar' , 'doneLabel': 'Fin', 'nextLabel': 'Sgte', 'prevLabel': 'Ant.'}).start();
+
+};
+
+
+$("#search-block-form").addClass("section site-search simple-input");
+$(".btn-search").remove();
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+</script>
 <!-- /#main, /#main-wrapper -->
 <?php if ($page['footer']): ?>
 <?php print render($page['footer']); ?>
 <!-- /#footer -->
 <?php endif; ?>
+
