@@ -18,7 +18,7 @@ Importar la base de datos portal.sql
     psql drupal < portal.sql
 
 
-Configurar el apache   
+Configurar e integrar con CKAN https://github.com/datospy/ckanext-datospy_theme/wiki/Integraci%C3%B3n-con-el-portal-%28drupal%29
 
 Auntenticacion del portal   
      user: admin  
